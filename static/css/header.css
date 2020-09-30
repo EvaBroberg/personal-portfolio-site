@@ -1,11 +1,11 @@
 .main-header {
   max-width: 750px;
-  padding-bottom: 30px;
   margin: 0 auto;
 }
 @media (min-width: 992px)  {
   .main-header {
-    max-width: 100%
+    max-width: 100%;
+    padding-bottom: 30px;
   }
 }
 
@@ -13,8 +13,24 @@
   display: none!important;
 }
 
+.navbar-fixed {
+  background-color: #051d2a;
+  opacity: 0.9;
+  height: 70px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+@media (min-width: 992px) {
+  .navbar-fixed {
+    background-color: transparent;
+    height: auto;
+  }
+}
+
 .nav-wrapper {
-  position: absolute!important;
+  position: fixed!important;
   right: 0;
   z-index: 9;
   padding: 5px 10px;
@@ -27,11 +43,17 @@
     display: flex;
     justify-content: space-between;
     padding: 0px;
+    height: fit-content!important;
+    background: #021326;
+    padding-bottom: 30px;
+    border-radius: 50px 0px 0px 50px;
+    margin-top: 30px;
   }
-}
-@media (min-width: 992px)  {
   .nav-wrapper ul {
-    margin-right: 10vw;
+    margin:0px 30px;
+  }
+  .nav-wrapper-mobile {
+    padding-left: 30px;
   }
 }
 
@@ -55,7 +77,6 @@ nav ul li:hover,nav ul li.active:hover {
 nav ul li.active {
   background-color: transparent;
   border-bottom: 1px solid white;
-  background-color: #02101f;
   opacity: 0.8;
 }
 
@@ -63,7 +84,7 @@ nav ul li.active {
   width: 100%!important;
   z-index: 10;
 }
-
+/* 
 .black-nav {
   background-image: linear-gradient(
   to bottom,
@@ -81,28 +102,30 @@ nav ul li.active {
   rgba(0, 0, 0, 0)
   );
   background-color: #02101f;
-  opacity: 0.8;
-  height: fit-content;
-}
+
+  padding-bottom: 70px;
+} */
 
 @media (min-width: 992px) {
   .logo-wrapper {
-    height: 160px;
-    display: flex;
-    align-items: flex-end;
+    background: #021326;
+    border-radius: 0px 50px 50px 0px;
+    border-left: none;
   }
 
   .logo-wrapper > a {
-    border-right: solid 1px white;
-    background-color: #02101f;
     opacity: 0.8;
-    padding: 30px 20px 30px 50px;
-    transition: all 2s;
+    padding: 30px;
+    transition: all 1s;
   }
   
   .logo-wrapper:hover > a {
+    padding: 30px 50px;
+  }
+
+  .logo-wrapper:hover {
+    background: #021326;
     background-color: #12355f;
-    padding: 30px 20px 30px 100px;
   }
   
   nav .brand-logo {

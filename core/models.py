@@ -3,26 +3,43 @@ from django.db import models
 # About model
 
 class About(models.Model):
-    short_description = models.TextField()
-    description = models.TextField()
-    image = models.ImageField(upload_to="about")
+    short_description = models.TextField(default='SOME STRING')
+    description       = models.TextField(default='SOME STRING')
+    image             = models.ImageField(upload_to="about")
 
     class Meta:
-        verbose_name = "About me"
+        verbose_name        = "About me"
         verbose_name_plural = "About me"
 
     def __str__(self):
         return "About me"
 
 
-# Service model
+# Skills model
 
-class Service(models.Model):
-    name = models.CharField(max_length=100, verbose_name="Service name")
-    description = models.TextField(verbose_name="About service")
+class Skills(models.Model):
+    skills = models.TextField(default='SOME STRING')
+
+    class Meta:
+        verbose_name        = "Skill"
+        verbose_name_plural = "Skills"
 
     def __str__(self):
-        return self.name
+        return self.skills
+
+
+# Experience model
+
+class Experience(models.Model):
+    experience = models.TextField(default='SOME STRING')
+
+    class Meta:
+        verbose_name        = "Experience"
+        verbose_name_plural = "Experience"
+
+    def __str__(self):
+        return self.experience
+
 
 # Recent work model 
 
@@ -33,13 +50,3 @@ class RecentWork(models.Model):
     def __str__(self):
         return self.title
 
-
-# Client model
-
-class Client(models.Model):
-    name = models.CharField(max_length=100, verbose_name="Client name")
-    description = models.TextField(verbose_name="work specific")
-    image = models.ImageField(upload_to="clients", default="default.png")
-
-    def __str__(self):
-        return self.name

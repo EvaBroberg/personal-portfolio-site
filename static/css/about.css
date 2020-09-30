@@ -1,3 +1,6 @@
+.section-about {
+    padding-top: 50px;
+}
 @media (min-width: 992px){
     .section-about {
         padding-top: 20vh;
@@ -9,26 +12,24 @@
     justify-content: center;
     align-items: center;
     height: fit-content;
+    margin-bottom: 30px;
 }
 
-@media (min-width: 1200px){
+@media (min-width: 601px) {
     .about-image-wrapper {
-        padding: 80px 0px!important;
+        padding-top: 30px!important;
     }
 }
 
 .about-image-wrapper img {
-    border: 8px solid white;
-    width: 250px;
-    height: 250px;
+    width: 80%;
+    height: auto;
     opacity: 0.9;
-    margin-bottom: 30px;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
 }
-
-@media (min-width: 1200px){
+@media (min-width: 601px) {
     .about-image-wrapper img {
-        width: 300px;
-        height: 300px;
+        width: 100%;
     }
 }
 
@@ -38,10 +39,22 @@
 
 @media (min-width: 992px) {
     .about-text-wrapper {
-        width: 80%;
         margin: 0 auto;
     }
 }
+
+@media (min-width: 992px) {
+    .dropdown-text {
+        margin-left: 30px!important;
+    }
+}
+
+@media (min-width: 1400px) {
+    .dropdown-text {
+        padding: 0px 80px!important;
+    }
+}
+
 
 /* pulsing bullets */
 

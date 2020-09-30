@@ -47,14 +47,14 @@ $(document).ready(function () {
       },
     ];
 
-    $(window).scroll(function () {
-      if (window.pageYOffset > 1000 - $(window).height()) {
-        $('nav').removeClass('transparent').addClass('black-nav');
-        console.log('halloo');
-      } else {
-        $('nav').addClass('transparent').removeClass('black-nav');
-      }
-    });
+    // $(window).scroll(function () {
+    //   if (window.pageYOffset > 1000 - $(window).height()) {
+    //     $('nav').removeClass('transparent').addClass('black-nav');
+    //     console.log('halloo');
+    //   } else {
+    //     $('nav').addClass('transparent').removeClass('black-nav');
+    //   }
+    // });
 
     Materialize.scrollFire(options);
   });

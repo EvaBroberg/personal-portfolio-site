@@ -2,55 +2,37 @@
 
 <section id="about" class="section section-about black scrollspy">
     <div class="row">
-    <div class="col s12 l4 about-image-wrapper">
-        <img src="static/img/me.jpg" alt="" class="about-img responsive-img circle" />
+    <div class="col s12 m4 about-image-wrapper">
+        <img src="{{ about.image.url }}" alt="" class="about-img responsive-img circle" />
     </div>
-    <div class="col s12 l8 dropdown-text">
-        <h2 class="center">About</h2>
+    <div class="col s12 m8 dropdown-text">
+        <h2>About</h2>
         <div class="about-text-wrapper">
             <p class="white-text">
-                <!-- I am proficient in both front and back end coding. My primary responsibilities include developing and designing front end web
-                architecture, ensuring the responsiveness of applications and working alongside graphic designers for web design features. I pride
-                myself with good organizational skills and attention to detail and approach every challenge with a desire to learn and strive to produce
-                outstanding work. -->
-                {{ about.description }}
+                {{ about.short_description }}
             </p>
             <div id="text">
                 <p class="white-text">
-                    As a recent full-stack development course graduate, I know that what I'm lacking is career experience. However, the qualifications
-                    that I bring cannot be measured by traditional experience. After working in creative industry for over 7 years and managing a course
-                    load with a full time job, I learned how to multitask and prioritize responsibilities. 
+                    {{ about.description }}
                 </p>
                 
                 <h5 class="white-text">Experienced in:</h5>
                 <ul>
-                    <li><span class="marker--pulse pulse-first">&bullet;</span><span>Developing front end website architecture.</span></li>
-                    <li><span class="marker--pulse pulse-second">&bullet;</span><span>Designing user interactions on web pages.</span></li>
-                    <li><span class="marker--pulse pulse-first">&bullet;</span><span>Developing back end website applications.</span></li>
-                    <li><span class="marker--pulse pulse-second">&bullet;</span><span>Ensuring responsiveness of applications.</span></li>
-                    <li><span class="marker--pulse pulse-first">&bullet;</span><span>Working alongside graphic designers for web design features.</span></li>
-                    <li><span class="marker--pulse pulse-second">&bullet;</span><span>Seeing through a project from conception to finished product.</span></li>
-                    <li><span class="marker--pulse pulse-first">&bullet;</span><span>Meeting both technical and consumer needs.</span></li>
-                    <li><span class="marker--pulse pulse-second">&bullet;</span><span>Staying abreast of developments in web applications and programming languages.</span></li>
+                    {% for skill in skills %}
+                    <li><span class="marker--pulse pulse-second">&bullet;</span><span>{{ skill }}</span></li>
+                    {% endfor %}
                 </ul>
                 
                 <h5 class="white-text">Skills and Acheivements:</h5>
                 <ul>
-                    <li><span class="marker--pulse pulse-first">&bullet;</span><span>Full Stack Web Development certification.</span></li>
-                    <li><span class="marker--pulse pulse-second">&bullet;</span><span>Strong organizational and project management skills.</span></li>
-                    <li>
-                        <span class="marker--pulse pulse-first">&bullet;</span><span>Proficient with fundamental front end languages HTML, CSS and JavaScript.</span>
-                    </li>
-                    <li><span class="marker--pulse pulse-second">&bullet;</span><span>Familiar with JavaScript framework ReactJs.</span></li>
-                    <li><span class="marker--pulse pulse-first">&bullet;</span><span>Proficient with server side language Python.</span></li>
-                    <li><span class="marker--pulse pulse-second">&bullet;</span><span>Proficient with Python frameworks Flask and Django.</span></li>
-                    <li><span class="marker--pulse pulse-first">&bullet;</span><span>Familiar with database technology such as MySQL and MongoDB.</span></li>
-                    <li><span class="marker--pulse pulse-second">&bullet;</span><span>Excellent verbal communication skills.</span></li>
-                    <li><span class="marker--pulse pulse-first">&bullet;</span><span>Good problem solving skills.</span></li>
-                    <li><span class="marker--pulse pulse-second">&bullet;</span><span>Attention to detail.</span></li>
+                    {% for experience in experiences %}
+                    <li><span class="marker--pulse pulse-second">&bullet;</span><span>{{ experience }}</span></li>
+                    {% endfor %}
                 </ul>
             </div>
-            <a style="margin-top: 40px;" id="toggle" class="waves-effect waves-light btn button">Read More</a>
+            <div class="button-wrapper">
+                <a id="toggle" class="waves-effect waves-light btn button">Read More</a>
+            </div>
         </div>
     </div>
 </div>
