@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+    <title>{% block title %}{% endblock %}</title>
+    {% include 'includes/stylesheets.html' %}
+    {% block stylesheet %}{% endblock %}
+</head>
+
+<body id="home" class="scrollspy">
+    <div id="particles-js"></div>
+    {% include 'includes/header.html' %}
+    {% block content %}{% endblock %}
+    
+    {% include 'includes/scripts.html' %}
+    {% block scripts %}{% endblock %}
+</body>
+
+</html>

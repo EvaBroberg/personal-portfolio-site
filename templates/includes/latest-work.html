@@ -1,0 +1,85 @@
+{% load static %}
+
+<!-- Section: Main -->
+<section id="portfolio" class="section section-main scrollspy">
+    <div class="container">
+        <h1 style="margin-bottom: 100px;" class="center">Latest Work</h1>
+        <!-- Row1 -->
+        <div class="row">
+            {% for work in works %}
+                <div class="col m6">
+                    <div style="margin: 0 !important;" class="card">
+                        <div style="opacity: 1;" class="card-image">
+                            <img src="img/gallery/work2.jpg" alt="" />
+                        </div>
+                    </div>
+                    <div style="background-color: #091c25; width: 100%; padding: 40px 20px;" class="content">
+                        <a style="opacity: 0.5; margin: 5px;" class="white-text flow-text" href="#">CODE</a>
+                        <a style="opacity: 0.5; margin: 5px;" class="white-text flow-text" href="#">DEMO</a>
+                    </div>
+                </div>
+                <div class="col m6 hide-on-small-only">
+                    <div class="img-content">
+                        <h3>Flora and Fauna</h3>
+                        <p>
+                            Flora and Fauna is a memory game with a goal to entertain and visually appeal to the player. Game was created for people of any age
+                            that are looking for a fun way to spend a bit of free time and are looking for a game that would not only be entertaining but would
+                            also stimulate the brain. While game is kid-friendly and easy to understand and navigate, it's primary purpose was to appeal for a
+                            grown-up who needs to add some fun into their busy schedule.
+                        </p>
+                        <div class="tech">
+                            <img
+                            style="width: 42px; height: 42px; filter: grayscale(1); opacity: 0.5; margin-right: 12px;"
+                            src="img/coding-logos/python.png"
+                            alt="python"
+                            />
+                            <img
+                            style="height: 37px; filter: grayscale(1) brightness(300%); opacity: 0.7; margin-right: 12px;"
+                            src="img/coding-logos/django.png"
+                            alt="django"
+                            />
+                            
+                            <img
+                            style="width: 42px; height: 42px; filter: grayscale(1) brightness(80%); opacity: 0.5; margin-right: 15px;"
+                            src="img/coding-logos/js.png"
+                            alt="js"
+                            />
+                            <img
+                            style="height: 42px; filter: grayscale(1) brightness(100%); opacity: 0.7; margin-right: 12px;"
+                            src="img/coding-logos/css.png"
+                            alt="css"
+                            />
+                            <img
+                            style="height: 42px; filter: grayscale(1) brightness(100%); opacity: 0.7; margin-right: 13px;"
+                            src="img/coding-logos/html.png"
+                            alt="css"
+                            />
+                            <img
+                            style="height: 42px; filter: grayscale(1) brightness(80%); opacity: 0.7; margin-right: 12px;"
+                            src="img/coding-logos/materialize.png"
+                            alt="css"
+                            />
+                            
+                            <img
+                            style="width: 50px; height: 50px; filter: grayscale(1) brightness(150%); opacity: 0.5; margin-right: 12px;"
+                            src="img/coding-logos/git.png"
+                            alt="css"
+                            />
+                            <img
+                            style="width: 50px; height: 50px; filter: grayscale(1) brightness(500%); opacity: 0.5; margin-right: 15px;"
+                            src="img/coding-logos/github.png"
+                            alt="css"
+                            />
+                            <img
+                            style="height: 60px; filter: grayscale(1) brightness(130%); opacity: 0.5; margin-right: 12px;"
+                            style="width: 55px;"
+                            src="img/coding-logos/heroku.png"
+                            alt="css"
+                            />
+                        </div>
+                    </div>
+                </div>
+            {% enfor %}
+        </div>
+    </div>
+</section>
