@@ -5,6 +5,7 @@
     left: 0;
     height: 50vh;
     z-index: 0;
+    opacity: 0.5;
 }
 @media (min-width: 601px) {
     .jumbotron-wrapper {
@@ -14,7 +15,7 @@
 
 video#myVideo {
     object-fit: cover;
-    width: 100%;
+    width: 100vw;
     height: 100%;
 }
 

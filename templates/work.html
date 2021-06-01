@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <section class="all-work row">
+
+{% for allWork in allWork %}
+
+
+  <!-- Modal Trigger -->
+  <div class="col s12 m6 l4">
+    <div class="work-col">
+        <div class="card work-card">
+            <div style="opacity: 1;" class="card-image">
+                <img src="{{ allWork.image.url }}" alt="" />
+            </div>
+        </div>
+        <div class="content">
+            <a style="opacity: 0.5; margin: 5px;" class="white-text flow-text modal-trigger" href="#{{ allWork.title }}">About</a>
+        </div>
+    </div>
+</div>
+
+  <!-- Modal Structure -->
+  <div id="{{ allWork.title }}" class="modal work-modal">
+    <div class="modal-content">
+        <div class="modal-close-wrapper">
+            <a style="color: wheat;" href="#!" class="modal-close">
+                <img src="../static/img/x-mark-white.png" alt="">
+            </a>
+        </div>
+        <div class="row work-row">
+            <div class="col l6">
+                <div class="card">
+                    <div style="opacity: 1;" class="card-image">
+                        <img src="{{ allWork.image.url }}" alt="" />
+                    </div>
+                </div>
+                <div class="content">
+                    {% if allWork.code %}
+                        <a class="waves-effect waves-light btn button" href="{{ allWork.code }}" target="_blank">CODE</a>
+                    {% endif %}
+                    {% if allWork.demo %}
+                        <a class="waves-effect waves-light btn button" href="{{ allWork.demo }}" target="_blank">DEMO</a>
+                    {% endif %}
+                    {% if allWork.site %}
+                        <a class="waves-effect waves-light btn button" href="{{ allWork.site }}" target="_blank">Visit site</a>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="work-description col l6 hide-on-small-only">
+                <div class="img-content">
+                    <h2>{{ allWork.title }}</h2>
+                    <p>{{ allWork.client }}</p>
+                    <p>{{ allWork.description }}</p>
+                    <p>{{ allWork.work_description }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+        
+        {% endfor %}
+    </section>
+</div>
+
+
+
+{% endblock %}

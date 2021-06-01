@@ -1,0 +1,20 @@
+.footer {
+    background-color: #095176;
+    padding: 30px 0px;
+    .social {
+        display: flex;
+        justify-content: center;
+        a {
+            padding: 10px 5px;
+            img {
+                max-width: 30px;
+                max-height: 30px
+            }
+        }
+    }
+    .copy {
+        p {
+            text-align: center;
+        }
+    }
+}

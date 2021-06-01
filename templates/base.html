@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
+
     <title>{% block title %}{% endblock %}</title>
     {% include 'includes/stylesheets.html' %}
     {% block stylesheet %}{% endblock %}
@@ -19,6 +20,7 @@
     {% block content %}{% endblock %}
     
     {% include 'includes/scripts.html' %}
+    {% include 'includes/footer.html' %}
     {% block scripts %}{% endblock %}
 </body>
 

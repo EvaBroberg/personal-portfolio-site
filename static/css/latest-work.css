@@ -1,0 +1,74 @@
+.latest-work-wrapper {
+  margin: 100px 0px;
+}
+
+.card {
+  margin-bottom: 0px;
+  border-radius: 50px 50px 0px 0px;
+  overflow: hidden;
+}
+
+.content {
+  border-radius: 0px 0px 50px 50px;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #021326;
+  width: 100%;
+  opacity: 0.8;
+  padding: 40px 20px;
+}
+
+.content {
+  text-transform: lowercase;
+}
+
+@media (min-width: 601px) {
+  .work-description {
+    padding: 0px 30px !important;
+  }
+}
+.work-row {
+  position: relative;
+}
+
+.work-row:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+
+.work-link {
+  padding-bottom: 5px;
+  border-bottom: 1px solid transparent;
+}
+
+.work-link:hover {
+  padding-bottom: 5px;
+  border-bottom: 1px solid white;
+}
+
+/* work animation */
+.bounce-up {
+  opacity: 0;
+  -moz-transition: all 700ms ease-out;
+  -webkit-transition: all 700ms ease-out;
+  -o-transition: all 700ms ease-out;
+  transition: all 700ms ease-out;
+  -moz-transform: translate3d(0px, 200px, 0px);
+  -webkit-transform: translate3d(0px, 200px, 0px);
+  -o-transform: translate(0px, 200px);
+  -ms-transform: translate(0px, 200px);
+  transform: translate3d(0px, 200, 0px);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.bounce-up.in-view {
+  opacity: 1;
+  -moz-transform: translate3d(0px, 0px, 0px);
+  -webkit-transform: translate3d(0px, 0px, 0px);
+  -o-transform: translate(0px, 0px);
+  -ms-transform: translate(0px, 0px);
+  transform: translate3d(0px, 0px, 0px);
+}
+
+/*# sourceMappingURL=latest-work.css.map */

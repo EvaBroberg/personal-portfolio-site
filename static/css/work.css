@@ -1,0 +1,36 @@
+.all-work {
+  flex-wrap: wrap;
+  margin-top: 100px;
+}
+@media (min-width: 1024px) {
+  .all-work {
+    margin-top: 150px;
+  }
+}
+.all-work .work-col {
+  margin: 20px 10px;
+}
+.all-work .work-col .content a {
+  text-transform: capitalize;
+}
+
+.work-modal {
+  background-color: black;
+  border: none;
+}
+.work-modal .modal-content {
+  background-color: black;
+  border: none;
+}
+.work-modal .modal-content .card {
+  border-radius: 0px;
+}
+.work-modal .modal-content .content {
+  background: transparent;
+}
+
+.work-modal:focus {
+  border: none;
+}
+
+/*# sourceMappingURL=work.css.map */

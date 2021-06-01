@@ -1,0 +1,91 @@
+{% load static %}
+
+<section id="resume" class="section section-resume scrollspy">
+    <div class="title-journey">
+        <h2 class="title">Experience</h2>
+        <p>click on bubbles and see what I was up to that year!</p>
+    </div>
+    <div class="row row-4">
+        {% for journey in journey %}
+            <div class="journey-col col s12 m6 ">
+                <div class="bubble">
+                    <a href="#{{ journey.date }}" class="modal-trigger">
+                        <p class="flow-text">{{ journey.date }}</p>
+                        <img src="{{ journey.image.url }}" alt="stylized button with date" />
+                    </a>
+                </div>
+            </div>
+
+            <div id="{{ journey.date }}" class="modal">
+                <div class="modal-content">
+                    <div class="modal-close-wrapper">
+                        <a href="#!" class="modal-close">
+                            <img src="static/img/x-mark.png" alt="">
+                        </a>
+                    </div>
+                    <div class="job"> 
+                            {% if journey.company_image %}
+                                <img src="{{ journey.company_image.url }}" alt="company logo">
+                            {% endif %}
+                       
+                        <div class="job-info">
+                            <h5 style="color: black;">{{journey.company_name}}</h5>
+                            <p style="color: black;">{{journey.job_title}}</p>
+                            <p class="job-date" style="color: black;">{{journey.job_date}}</p>
+                            {% if journey.company_page %}
+                                <a class="job-link" href="{{ journey.company_page }}" target="_blank">Visit {{journey.company_name}}</a>
+                            {% endif %}
+                            <ul>
+                                {% for duty in journey.duties.all %}
+                                <li><p>{{ duty.description }}</p></li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="job"> 
+                        {% if journey.company_image2 %}
+                            <img src="{{ journey.company_image2.url }}" alt="company logo">
+                        {% endif %}
+                        <div class="job-info">
+                            <h5 style="color: black;">{{journey.company_name2}}</h5>
+                            <p style="color: black;">{{journey.job_title2}}</p>
+                            <p class="job-date" style="color: black;">{{journey.job_date2}}</p>
+                            {% if journey.company_page2 %}
+                                <a class="job-link"  href="{{ journey.company_page }}" target="_blank">Visit {{journey.company_name2}}</a>
+                            {% endif %}
+                            <ul>
+                                {% for duty in journey.duties2.all %}
+                                <li><p>{{ duty.description }}</p></li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="job"> 
+                        {% if journey.company_image3 %}
+                            <img src="{{ journey.company_image3.url }}" alt="company logo">
+                        {% endif %}
+                        <div class="job-info">
+                            <h5 style="color: black;">{{journey.company_name3}}</h5>
+                            <p style="color: black;">{{journey.job_title3}}</p>
+                            <p class="job-date" style="color: black;">{{journey.job_date3}}</p>
+                            {% if journey.company_page3 %}
+                                <a class="job-link"  href="{{ journey.company_page }}" target="_blank">Visit {{journey.company_name3}}</a>
+                            {% endif %}
+                            <ul>
+                                {% for duty in journey.duties3.all %}
+                                <li><p>{{ duty.description }}</p></li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                   
+                   
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</section>
+
+

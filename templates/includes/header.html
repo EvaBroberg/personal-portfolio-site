@@ -4,7 +4,7 @@
     <div class="navbar-fixed">
         <nav class="transparent nav-wrapper z-depth-0">
             <div class="logo-wrapper">
-                <a href="#home" class="brand-logo"> <&#47; IB > </a>
+                <a href="/#home" class="brand-logo"> <&#47; IB > </a>
             </div>
             <div class="nav-wrapper nav-wrapper-mobile">
                 <a id="hamburger" href="#" data-activates="mobile-nav" class="button-collapse">
@@ -12,36 +12,36 @@
                     <span class="line line2"></span>
                     <span class="line line3"></span>
                 </a>
-                <ul class="right hide-on-med-and-down">
-                    <li class="active">
-                        <a href="#about">About</a>
+                <ul class="main-nav right hide-on-med-and-down">
+                    <li class="main-nav-item">
+                        <a href="/#about">About</a>
                     </li>
-                    <li>
-                        <a href="#portfolio">Portfolio</a>
+                    <li class="external-nav-item main-nav-item {% ifequal request.path '/work/'%} active {% endifequal%}">
+                        <a href="{% url 'work' %}">Portfolio</a>
                     </li>
-                    <li>
-                        <a href="#resume">Resume</a>
+                    <li class="main-nav-item ">
+                        <a href="/#resume">Resume</a>
                     </li>
-                    <li>
-                        <a href="#contact">Contact</a>
+                    <li class="main-nav-item"> 
+                        <a href="/#contact">Contact</a>
                     </li>
                 </ul>
             </div>
         </nav>
     </div>
     <!-- Side nav -->
-    <ul class="side-nav blue-grey darken-3" id="mobile-nav">
+    <ul class="side-nav" id="mobile-nav">
         <li>
-            <a href="#about">About</a>
+            <a href="/#about">About</a>
         </li>
         <li>
-            <a href="#portfolio">Portfolio</a>
+            <a href="{% url 'work' %}">Portfolio</a>
         </li>
         <li>
-            <a href="#resume">Resume</a>
+            <a href="/#resume">Resume</a>
         </li>
         <li>
-            <a href="#contact">Contact</a>
+            <a href="/#contact">Contact</a>
         </li>
     </ul>
 </header>
